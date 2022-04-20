@@ -6,7 +6,7 @@ Several approaches:
 
 1. body class
 2. separate stylesheets
-3. custom properties
+3. custom properties (most popular)
 4. server-side scripts
 
 <br>
@@ -448,6 +448,69 @@ HTML >> HEAD >> Google font link:
   <br><br>
 
         <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300..500&display=swap" rel="stylesheet">
+
+<br><br>
+
+### ICONS
+
+<br>
+
+Same as with typography, avoid using full white and heavy outlines.
+<br><br>
+
+**SVG icons**: change the fill with CSS
+<br>
+
+**Font icons**: change the color property
+<br>
+
+    /* SVG icon */
+    body.dark-theme svg.icon path {
+      fill: #efefef;
+    }
+
+    /* Font icon (using Font Awesome as an example) */
+    body.dark-theme .fa {
+      color: #efefef;
+    }
+
+<br><br>
+
+### BACKGROUND
+
+<br>
+
+Use an off-white for the text and off-black for the background.
+<br>
+
+The recommended dark theme surface color is `#121212`.
+The recommended light theme surface color is `#FFF`.
+
+See more in [Material Design guidelines for dark mode](https://material.io/design/color/dark-theme.html).
+<br><br>
+
+### COLOR PALETTES
+
+<br>
+
+**Contrast**
+<br>
+
+Run ideas through a contrast checker to ensure color ratios conform to WCAG’s guidelines for at least a AA rating, which is a [contrast ratio of 4.5:1](https://css-tricks.com/understanding-web-accessibility-color-contrast-guidelines-and-ratios/).
+<br>
+
+See [more on color spectrum on web](https://css-tricks.com/the-expanding-gamut-of-color-on-the-web/).
+
+<br>
+
+**Dark themes**:
+<br>
+
+- desaturated colors
+
+- accent colors are meant to be enhancements
+
+- possible combos: dark blue background + pale yellow text, dark brown + tan
 
 ---
 

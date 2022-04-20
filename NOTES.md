@@ -6,7 +6,7 @@ Several approaches:
 
 1. body class
 2. separate stylesheets
-3. custom properties (most popular)
+3. [custom properties](https://piccalil.li/tutorial/getting-started-with-css-custom-properties/) (most popular)
 4. server-side scripts
 
 <br>

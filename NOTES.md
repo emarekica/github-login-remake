@@ -22,8 +22,11 @@ Many operating systems let users choose between light and dark themes directly i
 <br><br>
 
 **This two ways will automatically "copy" the OS system preferences to the website. If OS is in dark mode, the website will also be in dark mode. And vice versa.**
+<br><br>
 
 ### CSS only
+
+<br>
 
 CSS has a prefers-color-scheme media query which can be used to detect user’s system color scheme preferences. It can have three possible values: no preference, light and dark.
 <br><br>
@@ -83,6 +86,8 @@ CSS:
 <br><br>
 
 ### CSS + JS
+
+<br>
 
 The `Window` interface's `matchMedia()` method returns a new `MediaQueryList` object that can then be used to determine if the `document` matches the `media query` string, as well as to monitor the document to detect when it matches (or stops matching) that media query.
 <br>
@@ -342,7 +347,107 @@ btn.addEventListener("click", function () {
 
 <br><br>
 
+---
+
+<br>
+
+## Design considerations
+
+<br>
+
+### IMAGES
+
+<br>
+
+Decrease the brightness and contrast a bit.
+<br>
+
+CSS `filter()`
+<br>
+
+    /* Apply the filter directly on the body tag */
+    body.dark-theme img {
+      filter: brightness(.8) contrast(1.2);
+    }
+
+    /* Or apply it via media query */
+    @media (prefers-color-scheme: dark) {
+      img {
+        filter: brightness(.8) contrast(1.2);
+      }
+    }
+
 <br><br>
+
+HTML <picture> element can load different versions of an image + prepare 2 images in PS
+<br>
+
+    <picture>
+
+      <!-- Use this image if the user's OS setting is light or unset -->
+      <source srcset="photo-light.png" media="(prefers-color-scheme: light) or (prefers-color-scheme: no-preference)">
+
+      <!-- Use this image if the user's OS setting is dark -->
+      <source srcset="photo-dark.png" media="(prefers-color-scheme: dark)">
+
+    </picture>
+
+<br><br>
+
+## DEPTH
+
+<br>
+
+Close elements should still be lighter and distant elements should still be darker – even in a dark UI.
+<br>
+
+![close and far UI elements](./img/close-far-ui-elements.png)
+<br><br>
+
+Use **opacity** to convey **depth** (with high opacity regions having a lower depth).
+Elements that have a higher elevation should have a lower opacity than elements that are “closer” in depth to the background.
+<br>
+
+![opacity and depth](./img/depth-opacity.png)
+<br><br>
+
+### TYPOGRAPHY
+
+<br>
+
+Balance the contrast.
+Use too heavy of a font and we get blaring text that’s makes us want to move away from the screen. Use too light of a font and we’ll strain our eyes while inching toward the screen to get a closer look.
+<br>
+
+**Variable fonts**
+<br>
+
+Use a lighter font weight to make the text easier to read whenever dark mode is active
+<br>
+
+CSS:
+
+    /* normal font weight: 400; */
+
+    body {
+      font-weight: 400;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        font-weight: 350;
+      }
+    }
+
+<br><br>
+
+HTML >> HEAD >> Google font link:
+
+- **declare which range of font-weight values** `@300..500`
+- download those two values `@300;500`
+  <br><br>
+
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300..500&display=swap" rel="stylesheet">
 
 ---
 

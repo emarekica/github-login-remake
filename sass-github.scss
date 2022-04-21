@@ -20,6 +20,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
+  background-color: $background;
 }
 
 .header {
@@ -35,7 +36,7 @@ img {
 }
 
 h1 {
-  color: $gray-dark;
+  color: $ordinary-font-color;
   font-size: $size-unit;
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -51,8 +52,8 @@ h1 {
   flex-flow: column nowrap;
   margin: 30px auto;
   justify-content: space-evenly;
-  background-color: $gray-light;
-  color: $gray-dark;
+  background-color: $form-login-color;
+  color: $ordinary-font-color;
   word-wrap: break-word;
   width: 340px;
   padding: 20px;
@@ -113,7 +114,7 @@ button {
 
 .create {
   font-size: 0.85 * $size-unit;
-  color: $blue;
+  color: $link-color;
   text-decoration: none;
 
   &:hover {
@@ -124,7 +125,7 @@ button {
 .link {
   position: relative;
   right: 0;
-  color: $blue;
+  color: $link-color;
   font-size: 0.85 * $size-unit;
   text-decoration: none;
 
@@ -135,19 +136,19 @@ button {
 }
 
 .forgot {
-  color: $blue;
+  color: $link-color;
   font-size: 0.85 * $size-unit;
   float: right;
   text-decoration: none;
 }
 
 .contact {
-  color: $gray-mid;
+  color: $contact-color;
   text-decoration: none;
   font-size: 0.85 * $size-unit;
 
   &:hover {
-    color: $blue;
+    color: $link-color;
     text-decoration: underline;
     cursor: pointer;
   }

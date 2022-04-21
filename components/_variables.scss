@@ -2,20 +2,33 @@ $size-unit: 14px;
 $radius: 6px;
 
 // light mode - alternative (1st version)
-$gray-light: #f6f8fa;
-$gray-mid: #586869;
-$gray-dark: #24292e;
-$green: #2ea44f;
-$green-dark: #24843c;
-$blue: #0366d6;
+// $gray-light: #f6f8fa;
+// $gray-mid: #586869;
+// $gray-dark: #24292e;
+// $green: #2ea44f;
+// $green-dark: #24843c;
+// $blue: #0366d6;
 
-// $background: $ $ $ $ $ $ $ $ $;
+$background: #fff;
+$container-form-color: #f6f8fa;
+$ordinary-font-color: #24292f;
+$login-border-color: #d0d7de;
+$button-sign-in-color: #2ca44e;
+$button-sign-in-hover-color: #24843c;
+$link-color: #0b68da;
+$input-border-color: #0b68da;
+$input-border-glow: #b6ccf2;
+$contact-color: #f6f8fa;
 
 // dark mode
 
-// $dark-space: #031116;
-// $form: #161b22;
-// $sign-in-button: #438340;
-// $link: #6aa5f8;
-// $selection: #3570e3;
-// $fonts: #cad1d8;
+$background: #0d1116;
+$container-form-color: #161b22;
+$ordinary-font-color: #c8d1d9;
+$login-border-color: #21262d;
+$button-sign-in-color: #238536;
+$button-sign-in-hover-color: #2da042;
+$link-color: #58a5ff;
+$input-border-color: #1f6feb;
+$input-border-glow: #0c2c6b;
+$contact-color: #6b727b;

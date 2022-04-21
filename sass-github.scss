@@ -1,14 +1,17 @@
 @import "./components/variables";
 @import "./components/mixins";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+    sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: $size-unit;
   line-height: 1.5;
   display: flex;
@@ -33,7 +36,7 @@ img {
 
 h1 {
   color: $gray-dark;
-  font-size: 1.7$size-unit;
+  font-size: $size-unit;
   font-weight: 300;
   letter-spacing: -0.5px;
   text-align: center;
@@ -54,7 +57,7 @@ h1 {
   width: 340px;
   padding: 20px;
   margin: 16px 0px 0px;
-  border-radius: $radius;   
+  border-radius: $radius;
 }
 
 .container__form-name {
@@ -88,7 +91,7 @@ button {
   border-radius: $radius;
   margin: 20px 0px 0px;
   padding: 5px 16px;
-  
+
   &:hover {
     background-color: $green-dark;
     cursor: pointer;
@@ -116,7 +119,7 @@ button {
   &:hover {
     text-decoration: underline;
   }
-} 
+}
 
 .link {
   position: relative;

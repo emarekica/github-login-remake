@@ -1,25 +1,21 @@
 $size-unit: 14px;
 $radius: 6px;
 
-// light mode
+// light mode - alternative (1st version)
 $gray-light: #f6f8fa;
 $gray-mid: #586869;
 $gray-dark: #24292e;
 $green: #2ea44f;
-$green-dark: hsl(135, 57%, 33%);
+$green-dark: #24843c;
 $blue: #0366d6;
 
-$white-space: #fff;
-$form: #f6f8fa;
-$sign-in-button: #53a158;
-$link-selection: #2b69d3;
-$fonts: #25292e;
+// $background: $ $ $ $ $ $ $ $ $;
 
 // dark mode
 
-$dark-space: #031116;
-$form: #161b22;
-$sign-in-button: #438340;
-$link: #6aa5f8;
-$selection: #3570e3;
-$fonts: #cad1d8;
+// $dark-space: #031116;
+// $form: #161b22;
+// $sign-in-button: #438340;
+// $link: #6aa5f8;
+// $selection: #3570e3;
+// $fonts: #cad1d8;

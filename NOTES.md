@@ -528,6 +528,18 @@ See [more on color spectrum on web](https://css-tricks.com/the-expanding-gamut-o
 
 ---
 
+<br>
+
+## SCSS / sass UPGRADES
+
+<br>
+
+[variables](https://sass-lang.com/documentation/variables)
+
+[property declarations](https://sass-lang.com/documentation/style-rules/declarations)
+
+---
+
 ### Resources
 
 <br>

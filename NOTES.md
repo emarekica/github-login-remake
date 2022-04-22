@@ -512,6 +512,20 @@ See [more on color spectrum on web](https://css-tricks.com/the-expanding-gamut-o
 
 - possible combos: dark blue background + pale yellow text, dark brown + tan
 
+<br><br>
+
+---
+
+<br>
+
+## Two-color borders
+
+<br>
+
+[Stack overflow](https://stackoverflow.com/questions/3906983/two-color-borders#:~:text=If%20you%20mean%20using%20two,across%20browsers%20in%20my%20experience.)
+
+<br><br>
+
 ---
 
 ### Resources

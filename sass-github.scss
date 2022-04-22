@@ -1,6 +1,36 @@
 @import "./components/variables";
 @import "./components/mixins";
 
+/* --------- theme colors --------- */
+
+.light-theme {
+  --background: $light-background;
+  --container__form: $light-container-form-color;
+  --font: $light-ordinary-font-color;
+  --form_login: $light-login-border-color;
+  --sing-in-button: $light-button-sign-in-color;
+  --sign-in-button_hover: $light-button-sign-in-hover-color;
+  --link: $light-link-color;
+  --input-border: $light-input-border-color;
+  --input-border-glow: $light-input-border-glow;
+  --contact-link: $light-contact-color;
+}
+
+.dark-theme {
+  --background: $dark-background;
+  --container__form: $dark-container-form-color;
+  --font: $dark-ordinary-font-color;
+  --form_login: $dark-login-border-color;
+  --sing-in-button: $dark-button-sign-in-color;
+  --sign-in-button_hover: $dark-button-sign-in-hover-color;
+  --link: $dark-link-color;
+  --input-border: $dark-input-border-color;
+  --input-border-glow: $dark-input-border-glow;
+  --contact-link: $dark-contact-color;
+}
+
+/* --------- Reset --------- */
+
 *,
 *::before,
 *::after {
@@ -22,6 +52,8 @@ body {
   min-height: 100vh;
   background-color: $background;
 }
+
+/* --------- GENERAL --------- */
 
 .header {
   margin: 0 auto;

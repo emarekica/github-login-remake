@@ -1,4 +1,31 @@
-*, *::before, *::after {
+:root {
+  --light-background: #fff;
+  --light-container-form-color: #f6f8fa;
+  --light-ordinary-font-color: #24292f;
+  --light-login-border-color: #d0d7de;
+  --light-button-sign-in-color: #2ca44e;
+  --light-button-sign-in-hover-color: #24843c;
+  --light-link-color: #0b68da;
+  --light-input-border-color: #0b68da;
+  --light-input-border-glow: #b6ccf2;
+  --light-contact-color: #f6f8fa;
+  --dark-background: #0d1116;
+  --dark-container-form-color: #161b22;
+  --dark-ordinary-font-color: #c8d1d9;
+  --dark-login-border-color: #21262d;
+  --dark-button-sign-in-color: #238536;
+  --dark-button-sign-in-hover-color: #2da042;
+  --dark-link-color: #58a5ff;
+  --dark-input-border-color: #1f6feb;
+  --dark-input-border-glow: #0c2c6b;
+  --dark-contact-color: #6b727b;
+}
+
+/* --------- theme colors --------- */
+/* --------- Reset --------- */
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 0;
@@ -6,7 +33,7 @@
 }
 
 body {
-  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 1.5;
   display: -webkit-box;
@@ -24,8 +51,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
+  background-color: var(--background);
 }
 
+/* --------- GENERAL --------- */
 .header {
   margin: 0 auto;
   text-align: center;
@@ -39,8 +68,8 @@ img {
 }
 
 h1 {
-  color: #24292e;
-  font-size: 1.7 14px;
+  color: var(--font);
+  font-size: 14px;
   font-weight: 300;
   letter-spacing: -0.5px;
   text-align: center;
@@ -49,7 +78,7 @@ h1 {
 }
 
 .container__form {
-  border: 1px solid #f6f8fa;
+  border: 1px solid var(--input-border);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,8 +91,8 @@ h1 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  background-color: #f6f8fa;
-  color: #24292e;
+  background-color: var(--container__form);
+  color: var(--font);
   word-wrap: break-word;
   width: 340px;
   padding: 20px;
@@ -80,7 +109,7 @@ h1 {
 }
 
 .input {
-  border: 1px solid #f6f8fa;
+  border: 1px solid var(--input-border);
   border-radius: 6px;
   height: 32px;
   display: block;
@@ -90,9 +119,9 @@ h1 {
 }
 
 button {
-  background-color: #2EA44F;
+  background-color: var(--sing-in-button);
   color: white;
-  font: normal;
+  font-style: normal;
   font-size: 14px;
   text-align: center;
   width: 100%;
@@ -105,12 +134,12 @@ button {
 }
 
 button:hover {
-  background-color: #24853d;
+  background-color: var(--sign-in-button_hover);
   cursor: pointer;
 }
 
 .login {
-  border: 1px solid #f6f8fa;
+  border: 1px solid var(--input-border);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,7 +157,7 @@ button:hover {
 
 .create {
   font-size: 11.9px;
-  color: #0366d6;
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -139,7 +168,7 @@ button:hover {
 .link {
   position: relative;
   right: 0;
-  color: #0366d6;
+  color: var(--link);
   font-size: 11.9px;
   text-decoration: none;
 }
@@ -150,20 +179,20 @@ button:hover {
 }
 
 .forgot {
-  color: #0366d6;
+  color: var(--link);
   font-size: 11.9px;
   float: right;
   text-decoration: none;
 }
 
 .contact {
-  color: #586869;
+  color: var(--contact-link);
   text-decoration: none;
   font-size: 11.9px;
 }
 
 .contact:hover {
-  color: #0366d6;
+  color: var(--link);
   text-decoration: underline;
   cursor: pointer;
 }
@@ -183,5 +212,26 @@ button:hover {
   margin-top: 40px 0 0;
   padding: 40px;
   width: 340px;
+}
+
+/* --------- switch --------- */
+.switch input {
+  display: none;
+}
+
+.slider {
+  /* background-color: #999; */
+  background-color: var(--themeSwitchColor);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+}
+
+input:checked + .slider {
+  -webkit-transform: translateX(8px);
+          transform: translateX(8px);
 }
 /*# sourceMappingURL=sass-github.css.map */

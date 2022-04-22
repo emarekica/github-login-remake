@@ -50,7 +50,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   min-height: 100vh;
-  background-color: $background;
+  background-color: var(--background);
 }
 
 /* --------- GENERAL --------- */
@@ -68,7 +68,7 @@ img {
 }
 
 h1 {
-  color: $ordinary-font-color;
+  color: var(--font);
   font-size: $size-unit;
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -84,8 +84,8 @@ h1 {
   flex-flow: column nowrap;
   margin: 30px auto;
   justify-content: space-evenly;
-  background-color: $form-login-color;
-  color: $ordinary-font-color;
+  background-color: var(--container__form);
+  color: var(--font);
   word-wrap: break-word;
   width: 340px;
   padding: 20px;
@@ -112,9 +112,9 @@ h1 {
 }
 
 button {
-  background-color: $green;
+  background-color: var(--sing-in-button);
   color: white;
-  font: normal;
+  font-style: normal;
   font-size: $size-unit;
   text-align: center;
   width: 100%;
@@ -126,7 +126,7 @@ button {
   padding: 5px 16px;
 
   &:hover {
-    background-color: $green-dark;
+    background-color: var(--sign-in-button_hover);
     cursor: pointer;
   }
 }
@@ -146,7 +146,7 @@ button {
 
 .create {
   font-size: 0.85 * $size-unit;
-  color: $link-color;
+  color: var(--link);
   text-decoration: none;
 
   &:hover {
@@ -157,7 +157,7 @@ button {
 .link {
   position: relative;
   right: 0;
-  color: $link-color;
+  color: var(--link);
   font-size: 0.85 * $size-unit;
   text-decoration: none;
 
@@ -168,19 +168,19 @@ button {
 }
 
 .forgot {
-  color: $link-color;
+  color: var(--link);
   font-size: 0.85 * $size-unit;
   float: right;
   text-decoration: none;
 }
 
 .contact {
-  color: $contact-color;
+  color: var(--contact-link);
   text-decoration: none;
   font-size: 0.85 * $size-unit;
 
   &:hover {
-    color: $link-color;
+    color: var(--link);
     text-decoration: underline;
     cursor: pointer;
   }
@@ -195,3 +195,5 @@ button {
   padding: 40px;
   width: 340px;
 }
+
+/* --------- switch --------- */

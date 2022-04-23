@@ -19,7 +19,7 @@
   --d-background: #0d1116;
   --d-font: #c8d1d9;
   --d-container-form: #161b22;
-  --d-login-container-input-border: #D8DEE3;
+  --d-login-container-input-border: #21262d;
   --d-link: #58a5ff;
   --d-input-border: #1f6feb;
   --d-input-outline: #0c2c6b;
@@ -48,7 +48,7 @@
   --d-background: #0d1116;
   --d-font: #c8d1d9;
   --d-container-form: #161b22;
-  --d-login-container-input-border: #d8dee3;
+  --d-login-container-input-border: #21262d;
   --d-link: #58a5ff;
   --d-input-border: #1f6feb;
   --d-input-outline: #0c2c6b;
@@ -147,6 +147,7 @@ h1 {
 .container__form {
   background: var(--containerForm);
   border: 1px solid var(--loginContainerInputBorder);
+  /* border: 1px solid #21262d; */
   display: flex;
   position: relative;
   box-orient: vertical;

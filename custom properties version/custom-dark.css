@@ -1,18 +1,17 @@
 /* --------- THEME COLORS --------- 
 
 
-  --l-background: #fff;
-  --l-font: #24292f;
-  --l-container-form: #f6f8fa; 
-  --l-login-container-input-border: #D8DEE3
-  --l-link: #0b68da;
-  --l-input-border: #d8dee3;
-  --l-input-outline: #b6ccf2; 
-  --l-button: #2ca44e;
-  --l-button-border-hover: #24843c;
-
-  --l-github-contact: #4c4b4b;
-  --l-switch-color: ???;
+  --d-background: #0d1116;
+  --d-font: #c8d1d9;
+  --d-container-form: #161b22;
+  --d-login-container-input-border: #D8DEE3
+  --d-link: #58a5ff;
+  --d-input-border: #1f6feb;
+  --d-input-outline: #0c2c6b;
+  --d-button: #238536;
+  --d-button-border-hover: #2ca44e:
+  --d-github-contact: #9f9e9e;
+  --d-switch-color: ???;
 
 */
 
@@ -45,7 +44,7 @@ body {
   text-align: center;
   align-items: center;
   min-height: 100vh;
-  background: #fff;
+  background: #0d1116;
 }
 
 /* --------- GENERAL --------- */
@@ -58,11 +57,11 @@ img {
   display: block;
   margin: 0 auto;
   padding: 32px 0px 24px;
-  width: 100px;
+  max-width: 3.5em;
 }
 
 h1 {
-  color: #24292f;
+  color: #c8d1d9;
   font-size: 1.7em;
   font-weight: 300;
   letter-spacing: -0.5px;
@@ -72,8 +71,8 @@ h1 {
 }
 
 .container__form {
-  background: #f6f8fa;
-  border: 1px solid #d8dee3;
+  background: #161b22;
+  border: 1px solid #21262d;
   display: flex;
   position: relative;
   box-orient: vertical;
@@ -85,7 +84,7 @@ h1 {
   max-width: 23em;
   margin-left: 1em;
 
-  color: #24292f;
+  color: #c8d1d9;
   word-wrap: break-word;
   width: 340px;
   padding: 20px;
@@ -110,7 +109,7 @@ label.label {
 }
 
 .forgot {
-  color: #0b68da;
+  color: #58a5ff;
   font-size: 0.9em;
   float: right;
   text-decoration: none;
@@ -125,26 +124,26 @@ label.label {
 }
 
 .input {
-  border: 0.09em solid #d8dee3;
+  border: 0.09em solid #21262d;
   border-radius: 6px;
   height: 32px;
   display: block;
   width: 100%;
   padding: 5px 0 5px 0;
   margin: 5px 0 13px;
-  background: #fff;
+  background: #0d1116;
 }
 
 /* double border */
 .input:hover {
-  border: 1px solid #0b68da;
-  outline: 0.2em solid #b6ccf2;
+  border: 1px solid #1f6feb;
+  outline: 0.2em solid #0c2c6b;
 }
 
 button {
   color: #fff;
-  background: #2ca44e;
-  border: 1px solid #24843c;
+  background: #238536;
+  border: 0.5px solid #2ca44e;
   font-style: normal;
   font-size: 14px;
   text-align: center;
@@ -157,7 +156,7 @@ button {
 }
 
 button:hover {
-  background-color: #24843c;
+  background-color: #2ca44e;
   cursor: pointer;
 }
 
@@ -172,16 +171,16 @@ button:hover {
   box-pack: center;
   flex-wrap: center;
   justify-content: center;
-  border: 1px solid #d0d7de;
+  border: 1px solid #21262d;
   max-width: 23em;
 }
 
 .login p {
-  color: #24292f;
+  color: #c8d1d9;
 }
 
 .create {
-  color: #0b68da;
+  color: #58a5ff;
   font-size: inherit;
   text-decoration: none;
 }
@@ -210,20 +209,20 @@ button:hover {
 .contact {
   position: relative;
   right: 0;
-  color: #0b68da;
+  color: #58a5ff;
   font-size: 11.9px;
   text-decoration: none;
 }
 
 .contact {
-  color: #4c4b4b;
+  color: #9f9e9e;
 }
 
 .link:hover,
 .contact:hover {
   cursor: pointer;
   text-decoration: underline;
-  color: #0b68da;
+  color: #58a5ff;
 }
 
 /* --------- switch --------- */
@@ -280,7 +279,3 @@ input:checked + .slider {
   transform: translateX(8px);
   transform: translateX(8px);
 }
-
-/* switch px >> em */
-/* check for doubles */
-/* alphabetical order */

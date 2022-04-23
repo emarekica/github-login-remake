@@ -131,8 +131,10 @@ label {
   background: #fff;
 }
 
+/* double border */
 .input:hover {
-  border: 1px solid var(--input-border);
+  border: 1px solid #0b68da;
+  outline: 0.15em solid #b6ccf2;
 }
 
 button {

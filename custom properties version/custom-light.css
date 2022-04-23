@@ -1,17 +1,17 @@
 /* --------- THEME COLORS --------- 
 
 
-  --light-background: #fff;
-  --light-container-form-color: #f6f8fa;
-  --light-ordinary-font-color: #24292f;
-  --light-login-border-color: #d0d7de;
-  --light-button-sign-in-color: #2ca44e;
-  --light-button-sign-in-hover-color: #24843c;
-  --light-link-color: #0b68da;
-  --light-input-border-color: #0b68da;
-  --light-input-border-glow: #b6ccf2;
-  --light-contact-color: #f6f8fa;
-  --light-switch-color: #d0d7de;
+  --l-background: #fff;
+  --l-container-form: #f6f8fa; 
+  --l-font: #24292f;
+  --l-login-border: #D8DEE3
+  --l-button: #2ca44e;
+  --l-button-hover: #24843c;
+  --l-link: #0b68da;
+  --l-input-border: #d8dee3;
+  --l-input-outline: #b6ccf2; 
+  --l-github-contact: #4c4b4b;
+  --l-switch-color: ???;
 
 */
 

@@ -1,43 +1,36 @@
-## CUSTOM CSS VARIABLES
-
-<br>
-
-done using a custom property name that begins with a double hyphen (`--`), and a property value that can be any valid CSS value.
-<br>
-
-It is written inside a ruleset:
-<br>
-
-    element {
-      --main-bg-color: brown;
-    }
+# Next:
 
 <br><br>
 
-**The selector given to the ruleset defines the scope** that the custom property can be used in.
+1. CSS tidy ups:
+   <br>
 
-A common best practice is to define custom properties on the :`root` pseudo-class, so that it can be applied globally across your HTML document:
-<br>
-
-    :root {
-      --main-bg-color: brown;
-    }
+- switch px >> em
+- check for doubles
+- alphabetical order
 
 <br><br>
 
-**Use**:
-<br>
+2. LOGO dark/light toggle
 
-Use the custom property value by specifying your custom property name inside the `var()` function, in place of a regular property value:
-<br>
+https://medium.com/geekculture/how-to-toggle-between-light-dark-mode-7efcb48d6211
 
-    element {
-      background-color: var(--main-bg-color);
-    }
+https://michaelti.ca/sandbox/2020/05/01/dark-mode-images-with-a-manual-toggle-switch/
+
+https://blog.appnation.co/how-to-set-a-dark-mode-app-icon-for-your-app-cc143d56f100
+
+https://www.tech-wiki.online/en/dark-mode-favicon.html
+
+https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+
+https://piccalil.li/tutorial/create-a-user-controlled-dark-or-light-mode/
+
+with `prefers-color-scheme` ?
 
 <br><br>
 
-**Custom property names are case sensitive.**
-<br>
+3. take in account user's OS preference
 
-**Custom properties do inherit.** This means that if no value is set for a custom property on a given element, the value of its parent is used
+<br><br>
+
+4. Refactor to SCSS

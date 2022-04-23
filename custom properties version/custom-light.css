@@ -99,6 +99,11 @@ label {
   margin-bottom: 0.5em;
 }
 
+/* password label */
+label.label {
+  margin-bottom: 0;
+}
+
 .pass {
   display: flex;
   justify-content: space-between;
@@ -134,12 +139,13 @@ label {
 /* double border */
 .input:hover {
   border: 1px solid #0b68da;
-  outline: 0.15em solid #b6ccf2;
+  outline: 0.2em solid #b6ccf2;
 }
 
 button {
-  background-color: var(--sing-in-button);
-  color: var(--font);
+  color: #fff;
+  background: #2ca44e;
+  border: 1px solid #24843c;
   font-style: normal;
   font-size: 14px;
   text-align: center;
@@ -148,12 +154,12 @@ button {
   height: 32px;
   border: none;
   border-radius: 6px;
-  margin: 20px 0px 0px;
+  margin: 0.1em 0 1.25em 0;
   padding: 5px 16px;
 }
 
 button:hover {
-  background-color: var(--sign-in-button_hover);
+  background-color: #24843c;
   cursor: pointer;
 }
 

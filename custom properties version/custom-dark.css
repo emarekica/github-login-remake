@@ -1,15 +1,14 @@
 /* --------- THEME COLORS --------- 
 
-
   --d-background: #0d1116;
   --d-font: #c8d1d9;
   --d-container-form: #161b22;
-  --d-login-container-input-border: #D8DEE3
+  --d-login-container-input-border: #D8DEE3;
   --d-link: #58a5ff;
   --d-input-border: #1f6feb;
   --d-input-outline: #0c2c6b;
   --d-button: #238536;
-  --d-button-border-hover: #2ca44e:
+  --d-button-border-hover: #2ca44e;
   --d-github-contact: #9f9e9e;
   --d-switch-color: ???;
 
@@ -265,9 +264,7 @@ button:hover {
 }
 
 .slider {
-  background: var(--themeSwitchColor);
-
-  /* background-color: white; */
+  background: #0d1116;
   transition: 0.4s;
   border-radius: 34px;
   height: 12px;

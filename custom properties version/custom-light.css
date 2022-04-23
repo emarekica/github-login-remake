@@ -1,16 +1,14 @@
 /* --------- THEME COLORS --------- 
 
-
   --l-background: #fff;
   --l-font: #24292f;
   --l-container-form: #f6f8fa; 
-  --l-login-container-input-border: #D8DEE3
+  --l-login-container-input-border: #D8DEE3;
   --l-link: #0b68da;
   --l-input-border: #d8dee3;
   --l-input-outline: #b6ccf2; 
   --l-button: #2ca44e;
   --l-button-border-hover: #24843c;
-
   --l-github-contact: #4c4b4b;
   --l-switch-color: ???;
 
@@ -58,7 +56,7 @@ img {
   display: block;
   margin: 0 auto;
   padding: 32px 0px 24px;
-  width: 100px;
+  max-width: 3.5em;
 }
 
 h1 {
@@ -266,9 +264,7 @@ button:hover {
 }
 
 .slider {
-  background: var(--themeSwitchColor);
-
-  /* background-color: white; */
+  background: rgb(0, 0, 0);
   transition: 0.4s;
   border-radius: 34px;
   height: 12px;

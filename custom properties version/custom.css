@@ -1,64 +1,94 @@
-/* CUSTOM PROPERTIES
-/* variables that represent different colors on the webpage
+/* --------- THEME COLORS --------- 
+
+--------- light theme ---------
+
+  --l-background: #fff;
+  --l-font: #24292f;
+  --l-container-form: #f6f8fa; 
+  --l-login-container-input-border: #D8DEE3;
+  --l-link: #0b68da;
+  --l-input-border: #d8dee3;
+  --l-input-outline: #b6ccf2; 
+  --l-button: #2ca44e;
+  --l-button-border-hover: #24843c;
+  --l-github-contact: #4c4b4b;
+  --l-switch-color: blue;
+
+--------- dark theme --------- 
+
+  --d-background: #0d1116;
+  --d-font: #c8d1d9;
+  --d-container-form: #161b22;
+  --d-login-container-input-border: #D8DEE3;
+  --d-link: #58a5ff;
+  --d-input-border: #1f6feb;
+  --d-input-outline: #0c2c6b;
+  --d-button: #238536;
+  --d-button-border-hover: #2ca44e;
+  --d-github-contact: #9f9e9e;
+  --d-switch-color: red;
+
 */
 
-:root {
-  --light-background: #fff;
-  --light-container-form-color: #f6f8fa;
-  --light-ordinary-font-color: #24292f;
-  --light-login-border-color: #d0d7de;
-  --light-button-sign-in-color: #2ca44e;
-  --light-button-sign-in-hover-color: #24843c;
-  --light-link-color: #0b68da;
-  --light-input-border-color: #0b68da;
-  --light-input-border-glow: #b6ccf2;
-  --light-contact-color: #f6f8fa;
-  --light-switch-color: #d0d7de;
+/* CUSTOM COMPONENTS */
 
-  --dark-background: #0d1116;
-  --dark-container-form-color: #161b22;
-  --dark-ordinary-font-color: #c8d1d9;
-  --dark-login-border-color: #21262d;
-  --dark-button-sign-in-color: #238536;
-  --dark-button-sign-in-hover-color: #2da042;
-  --dark-link-color: #58a5ff;
-  --dark-input-border-color: #1f6feb;
-  --dark-input-border-glow: #0c2c6b;
-  --dark-contact-color: #6b727b;
-  --dark-switch-color: #21262d;
+:root {
+  --l-background: #fff;
+  --l-font: #24292f;
+  --l-container-form: #f6f8fa;
+  --l-login-container-input-border: #d8dee3;
+  --l-link: #0b68da;
+  --l-input-border: #d8dee3;
+  --l-input-outline: #b6ccf2;
+  --l-button: #2ca44e;
+  --l-button-border-hover: #24843c;
+  --l-github-contact: #4c4b4b;
+  --l-switch-color: blue;
+
+  --d-background: #0d1116;
+  --d-font: #c8d1d9;
+  --d-container-form: #161b22;
+  --d-login-container-input-border: #d8dee3;
+  --d-link: #58a5ff;
+  --d-input-border: #1f6feb;
+  --d-input-outline: #0c2c6b;
+  --d-button: #238536;
+  --d-button-border-hover: #2ca44e;
+  --d-github-contact: #9f9e9e;
+  --d-switch-color: red;
 }
 
-/* --------- theme colors --------- */
+/*   --themeDropDownBg: var(--goldCrayola);
+*/
 
 .light-theme {
-  --background: var(--light-background);
-  --container__form: var(--light-container-form-color);
-  --font: var(--light-ordinary-font-color);
-  --form_login: var(--light-login-border-color);
-  --sing-in-button: var(--light-button-sign-in-color);
-  --sign-in-button_hover: var(--light-button-sign-in-hover-color);
-  --link: var(--light-link-color);
-  --input-border: var(--light-input-border-color);
-  --input-border-glow: var(--light-input-border-glow);
-  --contact-link: var(--light-contact-color);
-  --themeSwitchColor: var();
+  --backgroundClr: var(--l-background);
+  --font: var(--l-font);
+  --containerForm: var(--l-container-form);
+  --loginContainerInputBorder: var(--l-login-container-input-border);
+  --linkClr: var(--l-link);
+  --inputBorder: var(--l-input-border);
+  --inputOutline: var(--l-input-outline);
+  --buttonClr: var(--l-button);
+  --buttonBorderHover: var(--l-button-border-hover);
+  --contact: var(--l-github-contact);
+  --l-switch-color: blue;
 }
 
 .dark-theme {
-  --background: var(--dark-background);
-  --container__form: var(--dark-container-form-color);
-  --font: var(--dark-ordinary-font-color);
-  --form_login: var(--dark-login-border-color);
-  --sing-in-button: var(--dark-button-sign-in-color);
-  --sign-in-button_hover: var(--dark-button-sign-in-hover-color);
-  --link: var(--dark-link-color);
-  --input-border: var(--dark-input-border-color);
-  --input-border-glow: var(--dark-input-border-glow);
-  --contact-link: var(--dark-contact-color);
-  --themeSwitchColor: var();
+  --backgroundClr: var(--d-background);
+  --font: var(--d-font);
+  --containerForm: var(--d-container-form);
+  --loginContainerInputBorder: var(--d-login-container-input-border);
+  --linkClr: var(--d-link);
+  --inputBorder: var(--d-input-border);
+  --inputOutline: var(--d-input-outline);
+  --buttonClr: var(--d-button);
+  --buttonBorderHover: var(--d-button-border-hover);
+  --contact: var(--d-github-contact);
+  --d-switch-color: red;
 }
 
-/* --------- theme colors --------- */
 /* --------- Reset --------- */
 *,
 *::before,
@@ -74,8 +104,6 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 1.5;
-  display: box;
-  display: flexbox;
   display: flex;
   position: relative;
   box-orient: vertical;
@@ -89,7 +117,7 @@ body {
   text-align: center;
   align-items: center;
   min-height: 100vh;
-  background-color: var(--background);
+  background: #fff;
 }
 
 /* --------- GENERAL --------- */
@@ -102,40 +130,62 @@ img {
   display: block;
   margin: 0 auto;
   padding: 32px 0px 24px;
-  width: 100px;
+  max-width: 3.5em;
 }
 
 h1 {
-  color: var(--font);
-  font-size: 14px;
+  color: #24292f;
+  font-size: 1.7em;
   font-weight: 300;
   letter-spacing: -0.5px;
   text-align: center;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 .container__form {
-  border: 1px solid var(--contact-link);
-  display: box;
-  display: flexbox;
+  background: #f6f8fa;
+  border: 1px solid #d8dee3;
   display: flex;
   position: relative;
   box-orient: vertical;
   box-direction: normal;
   flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  margin: 30px auto;
   box-pack: space-evenly;
   flex-wrap: space-evenly;
   justify-content: space-evenly;
-  background-color: var(--container__form);
-  color: var(--font);
+  max-width: 23em;
+  margin-left: 1em;
+
+  color: #24292f;
   word-wrap: break-word;
   width: 340px;
   padding: 20px;
-  margin: 16px 0px 0px;
   border-radius: 6px;
+}
+
+label {
+  display: flex;
+  align-content: flex-start;
+  margin-bottom: 0.5em;
+}
+
+/* password label */
+label.label {
+  margin-bottom: 0;
+}
+
+.pass {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.4em;
+}
+
+.forgot {
+  color: #0b68da;
+  font-size: 0.9em;
+  float: right;
+  text-decoration: none;
 }
 
 .container__form-name {
@@ -147,106 +197,73 @@ h1 {
 }
 
 .input {
-  /* border: 1px solid var(--input-border); */
+  border: 0.09em solid #d8dee3;
   border-radius: 6px;
   height: 32px;
   display: block;
   width: 100%;
-  padding: 5px 12px;
-  margin: 5px 0 15px;
-  background: var(--background);
+  padding: 5px 0 5px 0;
+  margin: 5px 0 13px;
+  background: #fff;
 }
 
+/* double border */
 .input:hover {
-  border: 1px solid var(--input-border);
+  border: 1px solid #0b68da;
+  outline: 0.2em solid #b6ccf2;
 }
 
 button {
-  background-color: var(--sing-in-button);
-  color: var(--font);
+  color: #fff;
+  background: #2ca44e;
+  border: 1px solid #24843c;
   font-style: normal;
   font-size: 14px;
   text-align: center;
   width: 100%;
   display: block;
   height: 32px;
-  border: none;
   border-radius: 6px;
-  margin: 20px 0px 0px;
+  margin-top: 0.2em;
   padding: 5px 16px;
 }
 
 button:hover {
-  background-color: var(--sign-in-button_hover);
+  background-color: #24843c;
   cursor: pointer;
 }
 
 .login {
-  border: 1px solid var(--input-border);
-  display: box;
-  display: flexbox;
   display: flex;
   position: relative;
   width: 340px;
-  margin: 0 auto;
   text-align: center;
   border-radius: 6px;
-  margin: 16px 0 10px;
+  margin: 16px 0 10px 15px;
   padding: 15px 20px;
   box-pack: center;
   flex-wrap: center;
   justify-content: center;
+  border: 1px solid #d0d7de;
+  max-width: 23em;
 }
 
 .login p {
-  color: var(--font);
+  color: #24292f;
 }
 
 .create {
-  font-size: 11.9px;
-  color: var(--link);
+  color: #0b68da;
+  font-size: inherit;
   text-decoration: none;
 }
 
-.create:hover {
+.create:hover,
+.forgot:hover {
   text-decoration: underline;
-}
-
-.link {
-  position: relative;
-  right: 0;
-  color: var(--link);
-  font-size: 11.9px;
-  text-decoration: none;
-}
-
-.link:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.forgot {
-  color: var(--link);
-  font-size: 11.9px;
-  float: right;
-  text-decoration: none;
-}
-
-.contact {
-  color: var(--contact-link);
-  text-decoration: none;
-  font-size: 11.9px;
-}
-
-.contact:hover {
-  color: var(--link);
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 .footer {
-  display: box;
-  display: flexbox;
   display: flex;
   box-pack: justify;
   flex-wrap: justify;
@@ -256,9 +273,29 @@ button:hover {
   align-items: center;
   flex-wrap: distribute;
   justify-content: space-around;
-  margin-top: 40px 0 0;
+  margin-top: 3em;
   padding: 40px;
   width: 340px;
+}
+
+.link,
+.contact {
+  position: relative;
+  right: 0;
+  color: #0b68da;
+  font-size: 11.9px;
+  text-decoration: none;
+}
+
+.contact {
+  color: #4c4b4b;
+}
+
+.link:hover,
+.contact:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #0b68da;
 }
 
 /* --------- switch --------- */
@@ -301,9 +338,7 @@ button:hover {
 }
 
 .slider {
-  background: var(--themeSwitchColor);
-
-  /* background-color: white; */
+  background: rgb(0, 0, 0);
   transition: 0.4s;
   border-radius: 34px;
   height: 12px;
@@ -316,4 +351,8 @@ input:checked + .slider {
   transform: translateX(8px);
 }
 
+/* ---- TIDY UPS ---- */
+
 /* switch px >> em */
+/* check for doubles */
+/* alphabetical order */

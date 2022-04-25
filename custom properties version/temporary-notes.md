@@ -20,17 +20,10 @@
 
           `picture > source[media*="(prefers-color-scheme: ${colorScheme})"]`
 
-https://piccalil.li/tutorial/create-a-user-controlled-dark-or-light-mode/
+<br><br>
 
-https://blog.appnation.co/how-to-set-a-dark-mode-app-icon-for-your-app-cc143d56f100
-
-https://www.tech-wiki.online/en/dark-mode-favicon.html
-
-https://medium.com/geekculture/how-to-toggle-between-light-dark-mode-7efcb48d6211
-
-https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
-
-with `prefers-color-scheme` ?
+[StackOverflow inspo for the solution]
+(https://stackoverflow.com/questions/71013868/switch-logo-color-in-dark-mode-issue)
 
 <br><br>
 

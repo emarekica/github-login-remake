@@ -530,6 +530,31 @@ See [more on color spectrum on web](https://css-tricks.com/the-expanding-gamut-o
 
 <br>
 
+## Dark / light LOGO toggle
+
+<br>
+
+[StackOverflow inspo for the solution]
+(https://stackoverflow.com/questions/71013868/switch-logo-color-in-dark-mode-issue)
+
+<br><br>
+
+For further upgrade:
+<br>
+
+[Logo toggle with OS preference](https://michaelti.ca/sandbox/2020/05/01/dark-mode-images-with-a-manual-toggle-switch/)
+<br><br>
+
+// select all "source" elements where the parent is a "picture", where "source" elements contain attribute media containing "(prefers-color-scheme: ${colorScheme})"
+
+          `picture > source[media*="(prefers-color-scheme: ${colorScheme})"]`
+
+<br><br>
+
+---
+
+<br>
+
 ## CUSTOM CSS VARIABLES
 
 <br>
@@ -589,6 +614,49 @@ Use the custom property value by specifying your custom property name inside the
 [variables](https://sass-lang.com/documentation/variables)
 
 [property declarations](https://sass-lang.com/documentation/style-rules/declarations)
+
+<br><br>
+
+---
+
+<br>
+
+## NEW FEATURES LEARNED:
+
+<br>
+
+### 1. **Two-color borders**
+
+<br>
+
+[Stack overflow resource](https://stackoverflow.com/questions/3906983/two-color-borders#:~:text=If%20you%20mean%20using%20two,across%20browsers%20in%20my%20experience.)
+
+<br><br>
+
+---
+
+<br>
+
+### 2. **Dark / light LOGO toggle**
+
+<br>
+
+[StackOverflow inspo for the solution]
+(https://stackoverflow.com/questions/71013868/switch-logo-color-in-dark-mode-issue)
+
+<br><br>
+
+For further upgrade with user OS and manual change:
+<br>
+
+[Logo toggle with OS preference](https://michaelti.ca/sandbox/2020/05/01/dark-mode-images-with-a-manual-toggle-switch/)
+<br><br>
+
+"select all "source" elements where the parent is a "picture", where "source" elements contain attribute media containing "(prefers-color-scheme: ${colorScheme})" "
+
+          `picture > source[media*="(prefers-color-scheme: ${colorScheme})"]`
+
+<br><br>
 
 ---
 

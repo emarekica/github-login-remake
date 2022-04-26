@@ -104,36 +104,26 @@
 }
 
 body {
+  display: flex;
+
+  align-items: center;
+  flex-flow: column nowrap;
+  flex-wrap: start;
+  justify-content: flex-start;
+  min-height: 100vh;
+  position: relative;
+
+  background: var(--backgroundClr);
+  /* transition: background 0.6s ease; */
+
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   line-height: 1.5;
-  display: flex;
-  position: relative;
-  box-orient: vertical;
-  box-direction: normal;
-  flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  box-pack: start;
-  flex-wrap: start;
-  justify-content: flex-start;
-  box-align: center;
   text-align: center;
-  align-items: center;
-  min-height: 100vh;
-  background: var(--backgroundClr);
-  /* transition: background 0.6s ease; */
 }
 
 /* --------- LOGO change --------- */
-
-/* body {
-  --nav_logo: url("https://cdn-icons-png.flaticon.com/512/169/169367.png");
-}
-
-body[data-theme="dark"] {
-  --nav_logo: url("https://cdn-icons-png.flaticon.com/512/196/196685.png");
-} */
 
 .logo {
   content: var(--logo);
@@ -147,47 +137,48 @@ body[data-theme="dark"] {
 
 img {
   display: block;
+
   margin: 0 auto;
-  padding: 32px 0px 24px;
   max-width: 3.5em;
+  padding: 32px 0px 24px;
 }
 
 h1 {
+  margin-top: 0;
+  margin-bottom: 16px;
+
   color: var(--font);
   font-size: 1.7em;
   font-weight: 300;
   letter-spacing: -0.5px;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 1em;
 }
 
 .container__form {
-  background: var(--containerForm);
-  border: 1px solid var(--loginContainerInputBorder);
-  /* border: 1px solid #21262d; */
   display: flex;
+
   position: relative;
-  box-orient: vertical;
-  box-direction: normal;
   flex-flow: column nowrap;
-  box-pack: space-evenly;
   flex-wrap: space-evenly;
   justify-content: space-evenly;
   max-width: 23em;
-  margin-left: 1em;
+  margin-left: 16px;
+  padding: 20px;
+
+  background: var(--containerForm);
+  border: 1px solid var(--loginContainerInputBorder);
+  border-radius: 6px;
 
   color: var(--font);
   word-wrap: break-word;
   width: 340px;
-  padding: 20px;
-  border-radius: 6px;
 }
 
 label {
   display: flex;
+
   align-content: flex-start;
-  margin-bottom: 0.5em;
+  margin-bottom: 8px;
 }
 
 /* password label */
@@ -197,55 +188,64 @@ label.label {
 
 .pass {
   display: flex;
+
   justify-content: space-between;
   margin-top: 0.4em;
 }
 
 .forgot {
+  float: right;
+
   color: var(--linkClr);
   font-size: 0.9em;
-  float: right;
   text-decoration: none;
 }
 
 .container__form-name {
-  margin-bottom: 8px;
   display: inline-block;
-  text-align: left;
+
+  margin-bottom: 8px;
   position: relative;
   right: 60px;
+
+  text-align: left;
 }
 
 .input {
-  border: 0.09em solid var(--loginContainerInputBorder);
-  border-radius: 6px;
-  height: 32px;
   display: block;
-  width: 100%;
-  padding: 5px 0 5px 0;
+
+  height: 32px;
   margin: 5px 0 13px;
+  padding: 5px 0 5px 0;
+  width: 100%;
+
   background: var(--backgroundClr);
+  border: 1.44px solid var(--loginContainerInputBorder);
+  border-radius: 6px;
 }
 
 /* double border */
 .input:hover {
   border: 1px solid var(--inputBorder);
-  outline: 0.2em solid var(--inputOutline);
+  outline: 3.2px solid var(--inputOutline);
 }
 
 button {
-  color: #fff;
-  background: var(--buttonClr);
-  border: 1px solid var(--buttonBorderHover);
-  font-style: normal;
-  font-size: 14px;
-  text-align: center;
-  width: 100%;
   display: block;
+
   height: 32px;
-  border-radius: 6px;
-  margin-top: 0.2em;
+  margin-top: 3.2px;
   padding: 5px 16px;
+  width: 100%;
+
+  background: var(--buttonClr);
+  border-radius: 6px;
+  border: 1px solid var(--buttonBorderHover);
+
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
 }
 
 button:hover {
@@ -255,17 +255,19 @@ button:hover {
 
 .login {
   display: flex;
-  position: relative;
-  width: 340px;
-  text-align: center;
-  border-radius: 6px;
-  margin: 16px 0 10px 15px;
-  padding: 15px 20px;
-  box-pack: center;
+
   flex-wrap: center;
   justify-content: center;
+  margin: 16px 0 10px 15px;
+  max-width: 368px;
+  padding: 15px 20px;
+  position: relative;
+  width: 340px;
+
   border: 1px solid var(--loginContainerInputBorder);
-  max-width: 23em;
+  border-radius: 6px;
+
+  text-align: center;
 }
 
 .login p {
@@ -285,23 +287,22 @@ button:hover {
 
 .footer {
   display: flex;
-  box-pack: justify;
+
+  align-items: center;
   flex-wrap: justify;
   justify-content: space-between;
-  box-align: center;
-  text-align: center;
-  align-items: center;
-  flex-wrap: distribute;
-  justify-content: space-around;
-  margin-top: 3em;
+  margin-top: 48px;
   padding: 40px;
   width: 340px;
+
+  text-align: center;
 }
 
 .link,
 .contact {
   position: relative;
   right: 0;
+
   color: var(--linkClr);
   font-size: 11.9px;
   text-decoration: none;
@@ -313,19 +314,21 @@ button:hover {
 
 .link:hover,
 .contact:hover {
-  cursor: pointer;
-  text-decoration: underline;
   color: var(--linkClr);
+  text-decoration: underline;
+
+  cursor: pointer;
 }
 
 /* --------- switch --------- */
 
 .switch {
-  width: 55px;
   display: flex;
+
   align-items: center;
   justify-content: center;
-  margin: 1em;
+  margin: 16px;
+  width: 55px;
 }
 
 .switch input {
@@ -333,39 +336,44 @@ button:hover {
 }
 
 .switch div {
-  position: relative;
   display: block;
-  /* transform: translate(15em, 2em); */
-  width: 30px;
-  border-radius: 50px;
-  padding: 0 5px;
+
   box-sizing: border-box;
+  padding: 0 5px;
+  position: relative;
+  width: 30px;
+
+  border-radius: 50px;
+
   cursor: pointer;
 }
 
 .switch div {
-  position: relative;
   display: block;
-  background: var(--font);
-  width: 30px;
-  border-radius: 50px;
-  /* padding: 0 5px; */
-  padding: 2px 8px 2px 0;
+
   box-sizing: border-box;
+  padding: 2px 8px 2px 0;
+  position: relative;
+  width: 30px;
+
+  background: var(--font);
+  border-radius: 50px;
 
   cursor: pointer;
+
   transition: 0.3s ease;
-  position: relative;
-  /* background: lightblue; */
 }
 
 .slider {
-  background-color: var(--themeSwitchColor);
-  transition: 0.4s;
-  border-radius: 34px;
+  display: inline-block;
+
   height: 12px;
   width: 12px;
-  display: inline-block;
+
+  background-color: var(--themeSwitchColor);
+  border-radius: 34px;
+
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -381,5 +389,3 @@ input:checked + .slider {
 /* ---- TIDY UPS ---- */
 
 /* switch px >> em */
-/* check for doubles */
-/* alphabetical order */

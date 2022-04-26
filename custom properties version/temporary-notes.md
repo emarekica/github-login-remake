@@ -2,16 +2,7 @@
 
 <br><br>
 
-1. CSS tidy ups:
-   <br>
-
-- switch px >> em
-- check for doubles
-- alphabetical order
-
-<br><br>
-
-2. LOGO dark/light toggle
+1. LOGO dark/light toggle
 
 - https://michaelti.ca/sandbox/2020/05/01/dark-mode-images-with-a-manual-toggle-switch/
   <br><br>
@@ -27,7 +18,7 @@
 
 <br><br>
 
-3. take in account user's OS preference
+2. take in account user's OS preference
 
 <br><br>
 

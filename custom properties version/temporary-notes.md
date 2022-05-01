@@ -2,7 +2,15 @@
 
 <br><br>
 
-1. LOGO dark/light toggle
+**Take in account user's OS preference**
+
+<br><br>
+
+**Refactor to SCSS**
+
+<br><br>
+
+**LOGO dark/light toggle**
 
 - https://michaelti.ca/sandbox/2020/05/01/dark-mode-images-with-a-manual-toggle-switch/
   <br><br>
@@ -15,11 +23,3 @@
 
 [StackOverflow inspo for the solution]
 (https://stackoverflow.com/questions/71013868/switch-logo-color-in-dark-mode-issue)
-
-<br><br>
-
-2. take in account user's OS preference
-
-<br><br>
-
-4. Refactor to SCSS

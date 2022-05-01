@@ -109,6 +109,14 @@ The user might indicate this preference through an operating system setting (e.g
 
 1. [Light & Dark Mode with CSS Variables](https://www.youtube.com/watch?v=6YrOGKmGTCY&list=PLmGRn_VnTuAxIHKjfgoOEOIk72PeZdbaB&index=48)
 
+a: https://www.youtube.com/watch?v=6YrOGKmGTCY
+
+b: https://www.youtube.com/watch?v=pZhAiCSqHPs
+
+c: https://www.youtube.com/watch?v=uO3RF_67re8
+
+d:
+
 <br>
 
 2. [How to create a dark\light mode switch in CSS and Javascript](https://www.youtube.com/watch?v=py3W80hMuzE)

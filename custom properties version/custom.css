@@ -259,7 +259,7 @@ button:hover {
   flex-wrap: center;
   justify-content: center;
   margin: 16px 0 10px 15px;
-  max-width: 368px;
+  max-width: 23em;
   padding: 15px 20px;
   position: relative;
   width: 340px;

@@ -662,7 +662,8 @@ For further upgrade with user OS and manual change:
 
 <br><br>
 
-`aria-label`
+### 3. **`aria-label`**
+
 <br>
 
 An attribute defines a string value that labels an interactive element.
@@ -705,6 +706,27 @@ Fortunately, the HTML <input> with `type="checkbox"` works with native <label>. 
 
 <br><br>
 
+### 4. **SELECTING ROOT ELEMENT WITH JS**
+
+<br>
+
+`:root` = <html> = `documentElement`
+<br><br>
+
+1.  `Document.documentElement` returns the Element that is the root element of the document (for example, the <html> element for HTML documents).
+    <br>
+
+        console.log(document.documentElement);
+
+    <br><br>
+
+2.  Use the "":root" selector, which matches the root element of the document
+    <br>
+
+        console.log(document.querySelector(':root'));
+
+    <br><br>
+
 ---
 
 ### Resources
@@ -712,3 +734,7 @@ Fortunately, the HTML <input> with `type="checkbox"` works with native <label>. 
 <br>
 
 [A Complete Guide to Dark Mode on the Web](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/)
+
+<br><br>
+
+[A DRY approach to color themes in CSS](https://css-tricks.com/a-dry-approach-to-color-themes-in-css/)

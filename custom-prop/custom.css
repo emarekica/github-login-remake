@@ -382,7 +382,3 @@ input:checked + .slider {
   color: var(--font);
   font-size: smaller;
 }
-
-/* ---- TIDY UPS ---- */
-
-/* switch px >> em */

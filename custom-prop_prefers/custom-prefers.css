@@ -46,21 +46,6 @@
   --l-switch-color: rgb(234, 234, 234);
   --l-logo: url("img/l-logo.png");
 
-  --d-background: #0d1116;
-  --d-font: #c8d1d9;
-  --d-container-form: #161b22;
-  --d-login-container-input-border: #21262d;
-  --d-link: #58a5ff;
-  --d-input-border: #1f6feb;
-  --d-input-outline: #0c2c6b;
-  --d-button: #238536;
-  --d-button-border-hover: #2ca44e;
-  --d-github-contact: #9f9e9e;
-  --d-switch-color: #0d1116;
-  --d-logo: url("img/d-logo.png");
-}
-
-.light-theme {
   --backgroundClr: var(--l-background);
   --font: var(--l-font);
   --containerForm: var(--l-container-form);
@@ -75,24 +60,38 @@
   --logo: var(--l-logo);
 }
 
-.dark-theme {
-  --backgroundClr: var(--d-background);
-  --font: var(--d-font);
-  --containerForm: var(--d-container-form);
-  --loginContainerInputBorder: var(--d-login-container-input-border);
-  --linkClr: var(--d-link);
-  --inputBorder: var(--d-input-border);
-  --inputOutline: var(--d-input-outline);
-  --buttonClr: var(--d-button);
-  --buttonBorderHover: var(--d-button-border-hover);
-  --contact: var(--d-github-contact);
-  --themeSwitchColor: var(--d-switch-color);
-  --logo: var(--d-logo);
+/* --------- OS theme preference --------- */
+
+@media (prefers-color-scheme: dark) {
+  /* dark theme variables declared & initialized */
+  :root {
+    --d-background: #0d1116;
+    --d-font: #c8d1d9;
+    --d-container-form: #161b22;
+    --d-login-container-input-border: #21262d;
+    --d-link: #58a5ff;
+    --d-input-border: #1f6feb;
+    --d-input-outline: #0c2c6b;
+    --d-button: #238536;
+    --d-button-border-hover: #2ca44e;
+    --d-github-contact: #9f9e9e;
+    --d-switch-color: #0d1116;
+    --d-logo: url("img/d-logo.png");
+
+    --backgroundClr: var(--d-background);
+    --font: var(--d-font);
+    --containerForm: var(--d-container-form);
+    --loginContainerInputBorder: var(--d-login-container-input-border);
+    --linkClr: var(--d-link);
+    --inputBorder: var(--d-input-border);
+    --inputOutline: var(--d-input-outline);
+    --buttonClr: var(--d-button);
+    --buttonBorderHover: var(--d-button-border-hover);
+    --contact: var(--d-github-contact);
+    --themeSwitchColor: var(--d-switch-color);
+    --logo: var(--d-logo);
+  }
 }
-
-/* color: var(--fontColor);
-*/
-
 /* --------- Reset --------- */
 *,
 *::before,
@@ -319,73 +318,3 @@ button:hover {
 
   cursor: pointer;
 }
-
-/* --------- switch --------- */
-
-.switch {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  margin: 16px;
-  width: 55px;
-}
-
-.switch input {
-  display: none;
-}
-
-.switch div {
-  display: block;
-
-  box-sizing: border-box;
-  padding: 0 5px;
-  position: relative;
-  width: 30px;
-
-  border-radius: 50px;
-
-  cursor: pointer;
-}
-
-.switch div {
-  display: block;
-
-  box-sizing: border-box;
-  padding: 2px 8px 2px 0;
-  position: relative;
-  width: 30px;
-
-  background: var(--font);
-  border-radius: 50px;
-
-  cursor: pointer;
-
-  transition: 0.3s ease;
-}
-
-.slider {
-  display: inline-block;
-
-  height: 12px;
-  width: 12px;
-
-  background-color: var(--themeSwitchColor);
-  border-radius: 34px;
-
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  transform: translateX(8px);
-  transform: translateX(8px);
-}
-
-.theme-switch {
-  color: var(--font);
-  font-size: smaller;
-}
-
-/* ---- TIDY UPS ---- */
-
-/* switch px >> em */

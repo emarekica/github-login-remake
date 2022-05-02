@@ -282,7 +282,7 @@ The keys and the values stored with `localStorage` are always in the UTF-16 DOMS
 
 <br>
 
-[MDN local storate](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+[MDN local storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 <br><br>
 
 **Use case**:
@@ -511,6 +511,10 @@ See [more on color spectrum on web](https://css-tricks.com/the-expanding-gamut-o
 - accent colors are meant to be enhancements
 
 - possible combos: dark blue background + pale yellow text, dark brown + tan
+
+<br><br>
+
+[Choosing colors for themes](https://www.smashingmagazine.com/2020/08/application-color-schemes-css-custom-properties/)
 
 <br><br>
 

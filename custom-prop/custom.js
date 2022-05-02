@@ -23,7 +23,7 @@ const enableDarkMode = () => {
   document.body.classList.add("darkmode");
 
   // 2. update darkTheme in the localStorage
-  // storing key-value pairs to localStorage
+  // storing object/key-value pairs to localStorage
   // setItem(keyValue, keyName)
   localStorage.setItem("darkMode", "enabled");
 };

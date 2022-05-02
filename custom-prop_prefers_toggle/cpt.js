@@ -8,18 +8,18 @@ const themeSwitch = document.querySelector(".checkbox");
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 // Get user's theme preference from localStorage, if it's available
-let currentTheme = localStorage.getItem("theme");
+let currentTheme = sessionStorage.getItem("theme");
 console.log(currentTheme);
 
 // --- LOCAL STORAGE INFO
 
-// If the user's preference in localStorage is dark...
+// If the user's preference in sessionStorage is dark...
 if (currentTheme === "dark") {
   // toggle .dark-theme class on the :root
   document.documentElement.classList.toggle("dark-theme");
   // console.log("Local storage theme is DARK!");
 
-  // Otherwise, if the user's preference in localStorage is light...
+  // Otherwise, if the user's preference in sessionStorage is light...
 } else if (currentTheme === "light") {
   // toggle .light-theme class on the :root
   document.documentElement.classList.toggle("light-theme");
@@ -47,6 +47,6 @@ themeSwitch.addEventListener("change", () => {
     theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
   }
 
-  // save the current preference to localStorage to keep using it
-  localStorage.setItem("theme", theme);
+  // save the current preference to sessionStorage to keep using it
+  sessionStorage.clear();
 });

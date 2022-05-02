@@ -47,8 +47,8 @@ themeSwitch.addEventListener("change", () => {
   }
 
   // save the current preference to localStorage for next page load
-  localStorage.setItem("theme", theme);
+  // localStorage.setItem("theme", theme);
 
   // clear localStorage to enable OS theme preference on next page load
-  // localStorage.clear();
+  localStorage.clear();
 });

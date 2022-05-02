@@ -318,3 +318,69 @@ button:hover {
 
   cursor: pointer;
 }
+
+/* --------- switch --------- */
+
+.switch {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  width: 55px;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch div {
+  display: block;
+
+  box-sizing: border-box;
+  padding: 0 5px;
+  position: relative;
+  width: 30px;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.switch div {
+  display: block;
+
+  box-sizing: border-box;
+  padding: 2px 8px 2px 0;
+  position: relative;
+  width: 30px;
+
+  background: var(--font);
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.slider {
+  display: inline-block;
+
+  height: 12px;
+  width: 12px;
+
+  background-color: var(--themeSwitchColor);
+  border-radius: 34px;
+
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+.theme-switch {
+  color: var(--font);
+  font-size: smaller;
+}

@@ -11,7 +11,9 @@ CSS contains:
 
 - `prefers-color-scheme` media for OS preference detection
 
-- - toggle button for manually changin light/dark mode implemented
+- toggle button for manually changin light/dark mode implemented
+
+- uses `localStorage`
 
 <br><br>
 

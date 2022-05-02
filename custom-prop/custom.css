@@ -60,7 +60,7 @@
   --d-logo: url("img/d-logo.png");
 }
 
-.light-theme {
+.lightmode {
   --backgroundClr: var(--l-background);
   --font: var(--l-font);
   --containerForm: var(--l-container-form);
@@ -75,7 +75,7 @@
   --logo: var(--l-logo);
 }
 
-.dark-theme {
+.darkmode {
   --backgroundClr: var(--d-background);
   --font: var(--d-font);
   --containerForm: var(--d-container-form);

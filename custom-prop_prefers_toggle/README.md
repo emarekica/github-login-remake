@@ -15,6 +15,8 @@ CSS contains:
 
 - uses `localStorage`
 
+- contains additional script file with `sessionStorage` version
+
 <br><br>
 
 **Automatically detects user's OS prefered color theme.**

@@ -1,4 +1,4 @@
-// with localStorage
+// with sessionStorage
 
 "use strict";
 
@@ -15,12 +15,13 @@ console.log(currentTheme);
 
 // If the user's preference in localStorage is dark...
 if (currentTheme === "dark") {
-  // toggle .dark-theme class on the :root/html
+  // toggle .dark-theme class on the :root
   document.documentElement.classList.toggle("dark-theme");
+  // console.log("Local storage theme is DARK!");
 
   // Otherwise, if the user's preference in localStorage is light...
 } else if (currentTheme === "light") {
-  // toggle .light-theme class on the :root/html
+  // toggle .light-theme class on the :root
   document.documentElement.classList.toggle("light-theme");
 }
 
@@ -46,9 +47,6 @@ themeSwitch.addEventListener("change", () => {
     theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
   }
 
-  // save the current preference to localStorage for next page load
+  // save the current preference to localStorage to keep using it
   localStorage.setItem("theme", theme);
-
-  // clear localStorage to enable OS theme preference on next page load
-  // localStorage.clear();
 });

@@ -19,6 +19,10 @@ auto OS preference + manual toggle button
 
 <br><br>
 
+[localStorage guide](https://blog.logrocket.com/localstorage-javascript-complete-guide/)
+
+<br><br>
+
 **Refactor to SCSS**
 <br>
 

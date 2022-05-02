@@ -61,7 +61,6 @@
   --logo: var(--l-logo);
 }
 
-/* dark-theme */
 .dark-theme {
   --d-background: #0d1116;
   --d-font: #c8d1d9;

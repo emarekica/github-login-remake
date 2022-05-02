@@ -11,6 +11,14 @@
 
 <br><br>
 
+auto OS preference + manual toggle button
+
+- [How to make a website light/dark toggle with CSS & JS](https://www.youtube.com/watch?v=wodWDIdV9BY)
+
+- [Codepen example from previous video](https://codepen.io/kevinpowell/pen/EMdjOV)
+
+<br><br>
+
 **Refactor to SCSS**
 <br>
 

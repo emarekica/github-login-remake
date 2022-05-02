@@ -662,6 +662,49 @@ For further upgrade with user OS and manual change:
 
 <br><br>
 
+`aria-label`
+<br>
+
+An attribute defines a string value that labels an interactive element.
+
+It is intended for use on interactive elements, or elements made to be interactive via other [ARIA declarations](https://webaim.org/techniques/aria/), when there is no appropriate text visible in the DOM that could be referenced as a label
+<br>
+
+**ARIA ( (Accessible Rich Internet Applications or ARIA)) is a W3C specification for enhancing accessibility in ways that plain HTML cannot.**
+<br><br>
+
+Sometimes the default accessible name of an element is missing, or does not accurately describe its contents, and there is no content visible in the DOM that can be associated with the object to give it meaning. A common example is a button containing an SVG or icon font (which you shouldn't be using) without any text.
+<br><br>
+
+`aria-label` can be used in cases where text that could label the element is not visible. If there is visible text that labels an element, use `aria-labelledby` instead.
+
+<br><br>
+
+`aria-labelledby`
+
+The purpose of `aria-labelledby` is the same as that of `aria-label`. It provides the user with a recognizable, accessible name for an interactive element. If an element has both attributes set, `aria-labelledby` will be used. `aria-labelledby` takes precedence over all other methods of providing an accessible name, including `aria-label`, <label>, and the element's inner text.
+<br>
+
+    <span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="tac"></span>
+    <span id="tac">I agree to the Terms and Conditions.</span>
+
+<br><br>
+
+The `aria-labelledby` attribute only defines the accessible name. It doesn't provide any of <label>'s other functionality, such as **making clicking on the labeling element activate the input it is associated with. That has to be added back in with JavaScript**.
+<b><br>
+
+Fortunately, the HTML <input> with `type="checkbox"` works with native <label>. When feasible, use the following:
+
+    <label for="tac">
+      <input id="tac" type="checkbox" name="terms-and-conditions">
+      I agree to the Terms and Conditions.
+    </label>
+    <p>
+      <a href="tac.html">Read our Terms and Conditions</a>.
+    </p>
+
+<br><br>
+
 ---
 
 ### Resources

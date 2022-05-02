@@ -32,6 +32,7 @@
 
 /* CUSTOM COMPONENTS */
 
+/* light-theme */
 :root {
   --l-background: #fff;
   --l-font: #24292f;
@@ -58,6 +59,35 @@
   --contact: var(--l-github-contact);
   --themeSwitchColor: var(--l-switch-color);
   --logo: var(--l-logo);
+}
+
+/* dark-theme */
+.dark-theme {
+  --d-background: #0d1116;
+  --d-font: #c8d1d9;
+  --d-container-form: #161b22;
+  --d-login-container-input-border: #21262d;
+  --d-link: #58a5ff;
+  --d-input-border: #1f6feb;
+  --d-input-outline: #0c2c6b;
+  --d-button: #238536;
+  --d-button-border-hover: #2ca44e;
+  --d-github-contact: #9f9e9e;
+  --d-switch-color: #0d1116;
+  --d-logo: url("img/d-logo.png");
+
+  --backgroundClr: var(--d-background);
+  --font: var(--d-font);
+  --containerForm: var(--d-container-form);
+  --loginContainerInputBorder: var(--d-login-container-input-border);
+  --linkClr: var(--d-link);
+  --inputBorder: var(--d-input-border);
+  --inputOutline: var(--d-input-outline);
+  --buttonClr: var(--d-button);
+  --buttonBorderHover: var(--d-button-border-hover);
+  --contact: var(--d-github-contact);
+  --themeSwitchColor: var(--d-switch-color);
+  --logo: var(--d-logo);
 }
 
 /* --------- OS theme preference --------- */
@@ -90,6 +120,34 @@
     --contact: var(--d-github-contact);
     --themeSwitchColor: var(--d-switch-color);
     --logo: var(--d-logo);
+  }
+
+  .light-theme {
+    --l-background: #fff;
+    --l-font: #24292f;
+    --l-container-form: #f6f8fa;
+    --l-login-container-input-border: #d8dee3;
+    --l-link: #0b68da;
+    --l-input-border: #d8dee3;
+    --l-input-outline: #b6ccf2;
+    --l-button: #2ca44e;
+    --l-button-border-hover: #24843c;
+    --l-github-contact: #4c4b4b;
+    --l-switch-color: rgb(234, 234, 234);
+    --l-logo: url("img/l-logo.png");
+
+    --backgroundClr: var(--l-background);
+    --font: var(--l-font);
+    --containerForm: var(--l-container-form);
+    --loginContainerInputBorder: var(--l-login-container-input-border);
+    --linkClr: var(--l-link);
+    --inputBorder: var(--l-input-border);
+    --inputOutline: var(--l-input-outline);
+    --buttonClr: var(--l-button);
+    --buttonBorderHover: var(--l-button-border-hover);
+    --contact: var(--l-github-contact);
+    --themeSwitchColor: var(--l-switch-color);
+    --logo: var(--l-logo);
   }
 }
 /* --------- Reset --------- */

@@ -24,6 +24,10 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 
 <br>
 
+- auto-detects OS theme preference
+- option for manually switching light/dark mode
+- form validation
+- has customizable error messages
 - CSS divided into SASS components
 
 <br><br>
@@ -34,7 +38,7 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 
 <br>
 
-[] button for user to chande dark / light mode
+[x] button for user to chande dark / light mode
 
 [] input validation
 

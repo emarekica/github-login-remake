@@ -17,6 +17,8 @@ CSS contains:
 
 - contains additional script file with `sessionStorage` version
 
+- includes client-side form validation
+
 <br><br>
 
 **Automatically detects user's OS prefered color theme.**

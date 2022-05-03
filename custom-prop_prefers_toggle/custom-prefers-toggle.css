@@ -286,8 +286,12 @@ label.label {
   outline: 3.2px solid var(--inputOutline);
 }
 
+.input:focus {
+  color: var(--font);
+}
+
 /* validation */
-.input:invalid:required {
+.input:invalid:focus {
   border: 1px solid #903131;
   outline: 3.2px solid #ff9e9e;
 }

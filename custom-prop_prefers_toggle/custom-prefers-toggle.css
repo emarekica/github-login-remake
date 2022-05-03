@@ -286,6 +286,12 @@ label.label {
   outline: 3.2px solid var(--inputOutline);
 }
 
+/* validation */
+.input:invalid:required {
+  border: 1px solid #903131;
+  outline: 3.2px solid #ff9e9e;
+}
+
 button {
   display: block;
 

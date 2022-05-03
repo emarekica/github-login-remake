@@ -50,3 +50,6 @@ themeSwitch.addEventListener("change", () => {
   // save the current preference to sessionStorage to keep using it
   sessionStorage.clear();
 });
+
+// --- FORM VALIDATION
+// add customizable error message

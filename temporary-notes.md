@@ -13,8 +13,6 @@
 
 https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
 
-https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
-
 https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls
 
 https://developer.mozilla.org/en-US/docs/Learn/Forms
@@ -116,7 +114,7 @@ Can be “chained” with other pseudo-selectors: like `:focus` to only validate
 <br><br>
 
 2: **JS form validation**
-<br>
+<br><br>
 
 - control over the look and feel of native error messages
 - to deal with legacy browsers that do not support HTML's built-in form validation
@@ -124,17 +122,112 @@ Can be “chained” with other pseudo-selectors: like `:focus` to only validate
 
 [Constraint validation API](https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation)
 
-- `HTMLButtonElement` (represents a <button> element)
+- `HTMLButtonElement` (represents a `button` element)
 
-- `HTMLFieldSetElement` (represents a <fieldset> element)
+- `HTMLFieldSetElement` (represents a `fieldset` element)
 
-- `HTMLInputElement` (represents an <input> element)
+- `HTMLInputElement` (represents an `input` element)
 
-- `HTMLOutputElement` (represents an <output> element)
+- `HTMLOutputElement` (represents an `output` element)
 
-- `HTMLSelectElement` (represents a <select> element)
+- `HTMLSelectElement` (represents a `select` element)
 
-- `HTMLTextAreaElement` (represents a <textarea> element)
+- `HTMLTextAreaElement` (represents a `textArea` element)
+
+<br><br>
+
+The **Constraint validation API** makes the following **properties** available on the above elements.
+<br>
+
+1. `validationMessage`
+
+Returns a localized message describing the validation constraints that the control doesn't satisfy (if any). If the control is not a candidate for constraint validation (`willValidate` is `false`) or the element's value satisfies its constraints (is valid), this will return an empty string.
+
+2. `validity`
+
+Returns a `ValidityState` object that contains several properties describing the validity state of the element. You can find full details of all the available properties in the `ValidityState` reference page; below is listed a few of the more common ones:
+
+- `patternMismatch`
+
+  Returns `true` if the value does not match the specified `pattern`, and `false` if it does match. If `true`, the element matches the `:invalid` CSS pseudo-class.
+
+- `tooLong`
+
+  Returns `true` if the value is longer than the maximum length specified by the `maxlength` attribute, or `false` if it is shorter than or equal to the maximum. If `true`, the element matches the `:invalid` CSS pseudo-class.
+
+- `tooShort`
+
+  Returns `true` if the value is shorter than the minimum length specified by the `minlength` attribute, or `false` if it is greater than or equal to the minimum. If `true`, the element matches the `:invalid` CSS pseudo-class.
+
+- `rangeOverflow`
+
+  Returns `true` if the value is greater than the maximum specified by the `max` attribute, or `false` if it is less than or equal to the maximum. If `true`, the element matches the `:invalid` and `:out-of-range` CSS pseudo-classes.
+
+- `rangeUnderflow`
+
+  Returns `true` if the value is less than the minimum specified by the `min` attribute, or `false` if it is greater than or equal to the minimum. If `true`, the element matches the `:invalid` and `:out-of-range` CSS pseudo-classes.
+
+- `typeMismatch`
+
+  Returns `true` if the value is not in the required syntax (when type is `email` or `url`), or `false` if the syntax is correct. If `true`, the element matches the `:invalid` CSS pseudo-class.
+
+- `valid`
+
+  Returns `true` if the element meets all its validation constraints, and is therefore considered to be valid, or `false` if it fails any constraint. If `true`, the element matches the `:valid` CSS pseudo-class; the `:invalid` CSS pseudo-class otherwise.
+
+- `valueMissing`
+
+  Returns `true` if the element has a required attribute, but no value, or `false` otherwise. If `true`, the element matches the `:invalid` CSS pseudo-class.
+
+3. `willValidate`
+
+Returns `true` if the element will be validated when the form is submitted; `false` otherwise.
+<br><br>
+
+The Constraint Validation API also makes the following **methods** available on the above elements and the `form` element.
+<br><br>
+
+1. `checkValidity()`
+
+Returns `true` if the element's value has no validity problems; `false` otherwise. If the element is invalid, this method also fires an invalid event on the element.
+<br>
+
+2. `reportValidity()`
+
+Reports invalid field(s) using events. Useful in combination with `preventDefault()` in an `onSubmit` event handler.
+<br>
+
+3. `setCustomValidity(message)`
+
+**Adds a custom error message to the element**.
+If you set a custom error message, the element is considered to be invalid, and the specified error is displayed. This lets you use JavaScript code to establish a validation failure other than those offered by the standard HTML5 validation constraints.
+**The message is shown to the user when reporting the problem.**
+
+<br><br>
+
+**`validity`**
+
+The `validity` read-only property of the `HTMLObjectElement` interface returns a `ValidityState` object with the validity states that this element is in.
+
+<br><br>
+
+**`ValidityState.typeMismatch`**
+
+The read-only `typeMismatch` property of a `ValidityState` object indicates if the value of an <input>, after having been edited by the user, does not conform to the constraints set by the element's type attribute.
+
+Returns `true` if the value is not in the required syntax (when type is `email` or `url`), or `false` if the syntax is correct. **If `true`, the element matches the `:invalid` CSS pseudo-class**.
+
+If the `type` attribute expects specific strings, such as the `email` and `url` types and the **value doesn't conform to the constraints set by the type**, the `typeMismatch` property will be **true**.
+
+The `typeMismatch` is only one of the many possible errors and is only relevant for the `email` and `url` types.
+
+<br><br>
+
+    |  Input type |        Value        |	        	  Expected value          |
+    |-------------------------------------------------------------------------|
+    |    email   	|    x@y or  x@y.z	  |  email address, with or without TLD |
+    |-------------------------------------------------------------------------|
+    |    url	    |   x:  or  x://y.z   |	 protocol or full URL with protocol |
 
 <br><br>
 
@@ -148,7 +241,9 @@ Can be “chained” with other pseudo-selectors: like `:focus` to only validate
 
 - [YT: Validate Form Using JavaScript](https://www.youtube.com/watch?v=fz8bwvn9lA4)
 
-<br><br>
+## <br><br>
+
+<br>
 
 **Constraint validation**
 

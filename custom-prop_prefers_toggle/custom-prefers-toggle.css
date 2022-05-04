@@ -278,6 +278,8 @@ label.label {
   background: var(--backgroundClr);
   border: 1.44px solid var(--loginContainerInputBorder);
   border-radius: 6px;
+
+  color: var(--font);
 }
 
 /* double border */
@@ -291,6 +293,8 @@ label.label {
 }
 
 /* validation */
+/* make selection green while in focus, red when input valuated :invalid */
+
 .input:invalid:focus {
   border: 1px solid #903131;
   outline: 3.2px solid #ff9e9e;

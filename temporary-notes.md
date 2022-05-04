@@ -15,10 +15,6 @@ https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
 
 https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls
 
-https://developer.mozilla.org/en-US/docs/Learn/Forms
-
-https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation
-
 <br><br>
 
 ---
@@ -120,6 +116,15 @@ Can be “chained” with other pseudo-selectors: like `:focus` to only validate
 - to deal with legacy browsers that do not support HTML's built-in form validation
   <br>
 
+Most useful JS properties:
+
+- `novalidate`
+- `validity`
+- `typeMismatch`
+- `setCustomValidity`
+
+<br><br>
+
 [Constraint validation API](https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation)
 
 - `HTMLButtonElement` (represents a `button` element)
@@ -135,6 +140,10 @@ Can be “chained” with other pseudo-selectors: like `:focus` to only validate
 - `HTMLTextAreaElement` (represents a `textArea` element)
 
 <br><br>
+
+### Constraint validation API
+
+<br>
 
 The **Constraint validation API** makes the following **properties** available on the above elements.
 <br>
@@ -231,6 +240,62 @@ The `typeMismatch` is only one of the many possible errors and is only relevant 
 
 <br><br>
 
+**`novalidate`**
+
+**Attribute that turns off the browser's automatic validation.**
+
+This lets our script take control over validation.
+
+Doesn't disable support for the constraint validation API nor the application of CSS pseudo-classes. Even though the browser doesn't automatically check the validity of the form before sending its data, you can still do it yourself and style the form accordingly.
+
+<br><br>
+
+### Validating forms without a built-in API
+
+<br>
+
+- legacy browsers
+- [custom controls](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
+
+<br>
+
+**When writing your own validation form, ask yourself:**
+
+1. What kind of validation should I perform? (string operations, type conversion, regular expressions etc.)
+   <br>
+
+2. What should I do if the form doesn't validate? (UI)
+
+   Decide how the form will behave.
+
+   Does the form send the data anyway?
+
+   Should you highlight the fields that are in error?
+
+   Should you display error messages?
+
+<br>
+
+3. How can I help the user to correct invalid data?
+
+   Provide as much helpful information as possible in order to guide them in correcting their inputs. You should offer up-front suggestions so they know what's expected, as well as clear error messages.
+
+   Useful resources:
+
+   - [Form-Field Validation: The Errors-Only Approach](https://www.smashingmagazine.com/2012/06/form-field-validation-errors-only-approach/)
+
+   - [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/)
+
+   - [10 Tips for Optimizing Web Form Submission Usability](https://www.webfx.com/blog/web-design/10-tips-for-optimizing-web-form-submission-usability/)
+
+   - [Inline Validation in Web Forms](https://alistapart.com/article/inline-validation-in-web-forms/)
+
+<br><br>
+
+---
+
+<br>
+
 - [W3Schools JS form validation](https://www.w3schools.com/js/js_validation.asp)
 
 - [JavaScript Form Validation With Limit Login Attempts](https://www.formget.com/javascript-login-form/)
@@ -247,9 +312,9 @@ The `typeMismatch` is only one of the many possible errors and is only relevant 
 
 **Constraint validation**
 
-- [The Complete Guide to HTML Forms and Constraint Validation](https://www.sitepoint.com/html-forms-constraint-validation-complete-guide/)
-
 - [MDN Constraint validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation)
+
+- [The Complete Guide to HTML Forms and Constraint Validation](https://www.sitepoint.com/html-forms-constraint-validation-complete-guide/)
 
 - [Web forms — Working with user data](https://developer.mozilla.org/en-US/docs/Learn/Forms)
 
@@ -275,11 +340,14 @@ The `typeMismatch` is only one of the many possible errors and is only relevant 
 
 ---
 
-VALIDATION vs AUTHENTICATION
+<br>
+
+## VALIDATION vs AUTHENTICATION
 
 <br>
 
-**AUTHENTICATION vs AUTHORIZATION**
+## AUTHENTICATION vs AUTHORIZATION
+
 <br><br>
 
 **Authentication** is the process of verifying who someone is.

@@ -2,22 +2,7 @@
 
 <br><br>
 
-**Authentication**
-<br>
-
-**HTML form validation**
-
-### Next in reading
-
-<br>
-
-https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types
-
-https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls
-
-<br><br>
-
----
+## VALIDATION
 
 <br>
 
@@ -41,6 +26,14 @@ When you enter data, the browser and/or the web server will check to see that th
 - if the information is **incorrectly** formatted >> app gives the user an error message explaining what needs to be corrected, and lets them try again
 
 <br><br>
+
+---
+
+<br>
+
+## HTML form validation
+
+<br>
 
 HTML5 form controls validate most user data without relying on JavaScript. This is done by using validation attributes on form elements.
 
@@ -91,23 +84,23 @@ An example of this is the character limit seen on Twitter when tweeting. JavaScr
 - browser-automated error message
   <br><br>
 
-- [MDN Client side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
-
-- [W3Schools HTML Input attributes](https://www.w3schools.com/html/html_form_attributes.asp)
-
-- [HTML form validation](https://www.educba.com/html-form-validation/)
-
-- [HTML5 form validation examples](https://www.the-art-of-web.com/html/html5-form-validation/)
-
-- [YT: HTML form validation](https://www.youtube.com/watch?v=eUkDdEwUgjs)
-
-<br><br>
-
 `:invalid`
 
 Can be “chained” with other pseudo-selectors: like `:focus` to only validate when the user is typing, `:before` or :after to generate icons or text to provide more user feedback, or attribute selectors like `input[value=""]` to only validate input fields containing content.
 
 <br><br>
+
+#### Resources
+
+- [MDN Client side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+
+- [The HTML5 input types (form controls)](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
+
+<br><br>
+
+---
+
+<br>
 
 2: **JS form validation**
 <br><br>
@@ -280,71 +273,150 @@ Doesn't disable support for the constraint validation API nor the application of
 
    Provide as much helpful information as possible in order to guide them in correcting their inputs. You should offer up-front suggestions so they know what's expected, as well as clear error messages.
 
-   Useful resources:
+<br><br>
 
-   - [Form-Field Validation: The Errors-Only Approach](https://www.smashingmagazine.com/2012/06/form-field-validation-errors-only-approach/)
+---
 
-   - [Web Form Validation: Best Practices and Tutorials](https://www.smashingmagazine.com/2009/07/web-form-validation-best-practices-and-tutorials/)
+<br><br>
 
-   - [10 Tips for Optimizing Web Form Submission Usability](https://www.webfx.com/blog/web-design/10-tips-for-optimizing-web-form-submission-usability/)
+## Constraint validation
 
-   - [Inline Validation in Web Forms](https://alistapart.com/article/inline-validation-in-web-forms/)
+<br>
+
+The core of constraint validation is an algorithm browsers run when a form is submitted to determine its validity. To make this determination, the algorithm utilizes new HTML5 attributes min , max , step , pattern , and required as well as existing attributes maxlength and type.
+
+The idea is to trigger JavaScript on some `form` field event (like `onchange`) to calculate whether the constraint is violated, and then to use the method `field.setCustomValidity()` to set the result of the validation.
+
+<br><br>
+
+- new semantic types for the `input` element and constraint validation to ease the work of checking the form content on the client side
+
+- usual constraints can be checked, without the need for JS by setting new attributes
+
+- more complex constraints can be tested using the Constraint validation API
+
+<br>
+
+**HTML5 Constraint validation doesn't remove the need for validation on the server side, in a way that is consistent with what is done on the client side**. Invalid form requests can still be sent by non-compliant browsers.
+<br><br>
+
+`type="url"` and `type="email"` attributes have intrinsic constraints.
+Value must be complete URL or syntactically valid email, else `typeMismatch` constraint validation is triggered.
+
+But most input types don't have intrinsic constraints, as some are barred from constraint validation or have a sanitization algorithm transforming incorrect values to a correct default
+
+<br><br>
+
+### Constraint validation process
+
+<br>
+
+- done through the Constraint Validation API
+- on a single element that is part of the `form`
+- on the `form` element itself
+
+<br><br>
+
+`checkValidity()` = _statically_ validating the constraints
+
+`reportValidity()`, submitting the `form` = _interactively_ validating the constraints
+
+<br><br>
+
+**1. way**
+
+a) call to the `checkValidity()` or `reportValidity()` method of a form-associated DOM interface
+(`HTMLInputElement`, `HTMLSelectElement`, `HTMLButtonElement`, `HTMLOutputElement` or `HTMLTextAreaElement`)
+
+b) method evaluates the constraints only on this element
+
+c) script gets info
+
+d) `checkValidity()` method returns a boolean indicating whether the element's value passes its constraints
+(typically done by determining which of the CSS pseudo-classes, `:valid` or `:invalid`, applies)
+
+e) `reportValidity()` method reports any constraint failures to the user
+
+<br>
+
+**2. way**
+
+call to the `checkValidity()` or `reportValidity()` method on the `HTMLFormElement` interface
+
+Calling the `submit()` method on the `HTMLFormElement` interface doesn't trigger a constraint validation.
+This method sends the form data to the server even if doesn't satisfy the constraints.
+**Call the `click()` method on a submit button instead.**
+
+<br>
+
+**3. way**
+
+submitting the `form` itself
+
+If the `novalidate` attribute is set on the `form` element, interactive validation of the constraints doesn't happen.
+
+<br><br>
+
+### Visual styling of constraint validation
+
+<br>
+
+Done via CSS pseudo-classes:
+
+- `:required`
+
+- `:optional`
+
+- `:placeholder-shown`
+
+- `:valid`
+
+- `:invalid`
+
+<br><br>
+
+### Controlling the text of constraint violation
+
+<br>
+
+`element.setCustomValidity(message)` method on the following elements:
+
+- `fieldset``
+
+- `input`
+
+- `output`
+
+- `select`
+
+- submit buttons (`button type="submit"` `input type="submit"`) >> other buttons don't have constraint validation
+
+- `textarea`
+  <br>
+
+The `ValidityState` interface describes the object returned by the `validity` property of the element types listed above. It represents various ways that an entered value can be invalid. Together, they help explain why an element's value fails to validate, if it's not valid.
 
 <br><br>
 
 ---
 
-<br>
-
-- [W3Schools JS form validation](https://www.w3schools.com/js/js_validation.asp)
-
-- [JavaScript Form Validation With Limit Login Attempts](https://www.formget.com/javascript-login-form/)
-
-- [Data Validation – How to Check User Input on HTML Forms with Example JavaScript Code](https://www.freecodecamp.org/news/form-validation-with-html5-and-javascript/)
-
-- [YT: JS form validation](https://www.youtube.com/watch?v=In0nB0ABaUk)
-
-- [YT: Validate Form Using JavaScript](https://www.youtube.com/watch?v=fz8bwvn9lA4)
-
-## <br><br>
-
-<br>
-
-**Constraint validation**
+#### Resources:
 
 - [MDN Constraint validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation)
 
-- [The Complete Guide to HTML Forms and Constraint Validation](https://www.sitepoint.com/html-forms-constraint-validation-complete-guide/)
-
-- [Web forms — Working with user data](https://developer.mozilla.org/en-US/docs/Learn/Forms)
-
-<br><br>
-
-- [Form validation using HTML and JavaScript](https://www.geeksforgeeks.org/form-validation-using-html-javascript/)
-
-<br>
-
-**Input validation**
-
-- [Input validation - min/max length](https://riptutorial.com/html/example/2259/input-validation)
-
-<br>
-
-- [`<form>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form)
-
--[`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
-
-- [The HTML5 input types (form controls)](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
-
 <br><br>
 
 ---
 
 <br>
 
-## VALIDATION vs AUTHENTICATION
-
+**AUTHENTICATION vs VALIDATION**
 <br>
+
+Authentication is something which validates or confirms the authenticity of something.
+Validation is the act of validating something.
+
+<br><br>
 
 ## AUTHENTICATION vs AUTHORIZATION
 
@@ -391,7 +463,12 @@ Doesn't disable support for the constraint validation API nor the application of
 
 <br><br>
 
-**Refactor to SCSS**
+---
+
+<br><br>
+
+## Refactor to SCSS
+
 <br><br>
 
 - [SASS/SCSS official guide](https://sass-lang.com/guide)

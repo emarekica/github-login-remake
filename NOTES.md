@@ -1262,7 +1262,50 @@ Recommended to use the `preventDefault` method instead of `return false` inside 
 
 <br><br>
 
+During **form submission**, if a particular entry is unfilled, `return false` is used to prevent the submission of the form.
+<br>
+
+```
+<html>
+  
+<head>
+    <title>
+        Return false
+    </title>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Please fill all the entries");
+                return false;
+            }
+        }
+    </script>
+</head>
+  
+<body style="text-align:center;">
+    <h1 style="color: green;"> 
+            GeeksforGeeks 
+    </h1>
+    <form name="myForm" 
+          action="/action_page.php" 
+          onsubmit="return validateForm()" 
+   method="post">
+        Name:
+        <input type="text" name="fname">
+        <input type="submit" value="Submit">
+    </form>
+</body>
+  
+</html>
+
+```
+
+<br><br>
+
 - [event.preventDefault vs return false](https://thisthat.dev/event-prevent-default-vs-return-false/)
+
+- [return false in JS](https://www.geeksforgeeks.org/when-and-why-to-return-false-in-javascript/)
 
 <br><br>
 

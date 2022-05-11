@@ -12,6 +12,8 @@
 
 [property declarations](https://sass-lang.com/documentation/style-rules/declarations)
 
+[Udemy SASS course](https://www.udemy.com/course/advanced-css-and-sass/learn/lecture/8312900#overview)
+
 <br><br>
 
 ---

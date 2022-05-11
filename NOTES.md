@@ -1189,6 +1189,83 @@ The `ValidityState` interface describes the object returned by the `validity` pr
 
 <br><br>
 
+### `return false` vs `prevernt default`
+
+<br>
+
+`preventDefault()` and `return false` are the different **ways to prevent the default event from happening**.
+
+For example, when user clicks on an external link, we should display a confirmation modal that asks user for redirecting to the external website or not:
+<br>
+
+```js
+hyperlink.addEventListener("click", function (e) {
+  // Don't redirect user to the link
+  e.preventDefault();
+});
+```
+
+<br><br>
+
+Or we don't want to submit the form when clicking its submit button. Instead, we want to validate the form first:
+<br>
+
+```js
+submitButton.addEventListener("click", function (e) {
+  // Don't submit the form when clicking a submit
+  e.preventDefault();
+});
+```
+
+<br><br>
+
+**Diferences**
+<br>
+
+`return false` doesn't have any effect on the default behavior if you use the `addEventListener` method to handle an event. It only works when the event handler is declared as an element's attribute.
+`return false` will cancel the event except the mouseover event
+
+`onclick` is event handler for processing click events on a given element. Function expression receives mouse event as argument.
+
+    target.onclick = functionRef;
+
+<br>
+
+Only one `onclick` handler can be assigned to an object at a time. You may prefer to use the `EventTarget.addEventListener()` method instead, since it's more flexible.
+
+<br>
+
+```js
+
+```
+
+<br><br>
+
+```js
+hyperlink.addEventListener("click", function (e) {
+  // Does NOT work
+  return false;
+});
+
+// Work
+hyperlink.onclick = function (e) {
+  return false;
+};
+```
+
+<br><br>
+
+**Good practices**
+<br>
+
+Recommended to use the `preventDefault` method instead of `return false` inside an event handler. Because the latter only works with using the `onclick` attribute which will remove other handlers for the same event.
+
+<br><br>
+
+- [event.preventDefault vs return false](https://thisthat.dev/event-prevent-default-vs-return-false/)
+
+<br><br>
+
 ---
 
 #### Resources:

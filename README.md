@@ -40,7 +40,7 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 
 [x] button for user to chande dark / light mode
 
-[] input validation
+[x] input validation
 
 <br><br>
 
@@ -57,6 +57,10 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 ---
 
 ## Try it!
+
+<br>
+
+[GitHub login page](https://emarekica.github.io/github-login-remake/)
 
 <br><br>
 

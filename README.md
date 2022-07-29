@@ -76,7 +76,8 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 
 <br>
 
-[GitHub login page](https://emarekica.github.io/github-login-remake/)
+[GitHub login page]()
+
 
 <br><br>
 

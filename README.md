@@ -10,11 +10,23 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 
 ## Technologies:
 
+<br>
+
 - HTML5
 
-- CSS3 + SCSS (mixins, variables)
+- CSS3, SCSS
 
 - JavaScript
+
+<br>
+
+- uses `localStorage`
+
+- additional script with `sessionStorage` version
+
+- CSS custom properties
+
+- `prefers-color-scheme`
 
 <br><br>
 
@@ -25,10 +37,12 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 <br>
 
 - auto-detects OS theme preference
+
 - option for manually switching light/dark mode
-- form validation
-- has customizable error messages
-- CSS divided into SASS components
+
+- client-side form validation
+
+- customizable error messages
 
 <br><br>
 
@@ -41,6 +55,8 @@ This is an exercise in remaking a login page for GitHub, in both light and dark 
 [x] button for user to chande dark / light mode
 
 [x] input validation
+
+[ ] dynamically change favicon
 
 <br><br>
 

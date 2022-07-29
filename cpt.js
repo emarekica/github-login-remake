@@ -100,3 +100,10 @@ function showError() {
   // Set the styling appropriately
   emailError.className = "error active";
 }
+
+//
+
+// --- dynamically change favicon
+// selection: const linkElement = document.querySelector('link[rel=icon]');
+// dark: "assets/d-logo.ico"
+// light: "assets/l-logo.ico"

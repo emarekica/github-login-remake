@@ -45,7 +45,7 @@
   --l-button-border-hover: #24843c;
   --l-github-contact: #4c4b4b;
   --l-switch-color: rgb(234, 234, 234);
-  --l-logo: url("img/l-logo.png");
+  --l-logo: url("assets/l-logo.png");
 
   --backgroundClr: var(--l-background);
   --font: var(--l-font);
@@ -73,7 +73,7 @@
   --d-button-border-hover: #2ca44e;
   --d-github-contact: #9f9e9e;
   --d-switch-color: #0d1116;
-  --d-logo: url("img/d-logo.png");
+  --d-logo: url("assets/d-logo.png");
 
   --backgroundClr: var(--d-background);
   --font: var(--d-font);
@@ -105,7 +105,7 @@
     --d-button-border-hover: #2ca44e;
     --d-github-contact: #9f9e9e;
     --d-switch-color: #0d1116;
-    --d-logo: url("img/d-logo.png");
+    --d-logo: url("assets/d-logo.png");
 
     --backgroundClr: var(--d-background);
     --font: var(--d-font);
@@ -133,7 +133,7 @@
     --l-button-border-hover: #24843c;
     --l-github-contact: #4c4b4b;
     --l-switch-color: rgb(234, 234, 234);
-    --l-logo: url("img/l-logo.png");
+    --l-logo: url("assets/l-logo.png");
 
     --backgroundClr: var(--l-background);
     --font: var(--l-font);

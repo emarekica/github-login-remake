@@ -1,26 +1,38 @@
-// with sessionStorage
-// with form validation
+// sessionStorage
+// form validation
 
 "use strict";
 
 const themeSwitch = document.querySelector(".checkbox");
+const favicon = document.getElementById("favicon");
 
 // Check for dark mode OS preference
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-// Get user's theme preference from localStorage, if it's available
-let currentTheme = sessionStorage.getItem("theme");
-console.log(currentTheme);
+// Favicon change
+const changeFavicon = () => {
+  if (prefersDarkScheme.matches) {
+    favicon.href = "./assets/dark-fav.ico";
+  } else {
+    favicon.href = "./assets/light-fav.ico";
+  }
+};
+
+changeFavicon();
+
+prefersDarkScheme.addEventListener("change", changeFavicon);
 
 // --- LOCAL STORAGE INFO
 
-// If the user's preference in sessionStorage is dark...
+// User'S theme preference from localStorage, if available
+let currentTheme = sessionStorage.getItem("theme");
+
+// If preference in sessionStorage is dark...
 if (currentTheme === "dark") {
   // toggle .dark-theme class on the :root
   document.documentElement.classList.toggle("dark-theme");
-  // console.log("Local storage theme is DARK!");
 
-  // Otherwise, if the user's preference in sessionStorage is light...
+  // If preference in sessionStorage is light...
 } else if (currentTheme === "light") {
   // toggle .light-theme class on the :root
   document.documentElement.classList.toggle("light-theme");
@@ -31,7 +43,7 @@ if (currentTheme === "dark") {
 themeSwitch.addEventListener("change", () => {
   let theme;
 
-  // If the user's OS setting is dark and matches .dark-theme class...
+  // If OS setting is dark + matches .dark-theme class...
   if (prefersDarkScheme.matches) {
     // toggle the light mode class
     document.documentElement.classList.toggle("light-theme");
@@ -42,15 +54,18 @@ themeSwitch.addEventListener("change", () => {
       : "dark";
   }
 
-  // otherwise, do the same thing, but for .dark-mode
+  // else do the same thing for .dark-mode
   else {
     document.documentElement.classList.toggle("dark-theme");
+
     theme = document.body.classList.contains("dark-theme") ? "dark" : "light";
   }
 
-  // save the current preference to sessionStorage to keep using it
+  // save current preference to sessionStorage to keep using it
   sessionStorage.clear();
 });
+
+//
 
 // --- FORM VALIDATION
 // add customizable error message with Constraint validation API
@@ -100,10 +115,3 @@ function showError() {
   // Set the styling appropriately
   emailError.className = "error active";
 }
-
-//
-
-// --- dynamically change favicon
-// selection: const linkElement = document.querySelector('link[rel=icon]');
-// dark: "assets/d-logo.ico"
-// light: "assets/l-logo.ico"
